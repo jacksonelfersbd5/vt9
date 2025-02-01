@@ -1,0 +1,179 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/grassland/parts/dm11.aspen.v2.01.glb" type="PackedScene" id=2]
+[ext_resource path="res://Levels/Main/Environment.tres" type="Environment" id=3]
+[ext_resource path="res://Levels/Main/L_Main.gd" type="Script" id=4]
+[ext_resource path="res://textures/terrain.grass.png" type="Texture" id=5]
+[ext_resource path="res://objects/grassland/parts/dm11.aspen.v1.01.glb" type="PackedScene" id=6]
+[ext_resource path="res://scenes/dm17x201.tscn" type="PackedScene" id=7]
+[ext_resource path="res://objects/grassland/parts/dm11.rock.sm.v1.01.glb" type="PackedScene" id=8]
+[ext_resource path="res://objects/grassland/parts/dm11.rock.sm.v2.01.glb" type="PackedScene" id=12]
+
+[sub_resource type="CylinderMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 5 )
+uv1_scale = Vector3( 26, 26, 1 )
+
+[node name="L_Main" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.728291, 2, 11.2677 )
+speed = 8
+
+[node name="ArenaGeometry" type="Spatial" parent="."]
+
+[node name="CSGMesh" type="CSGMesh" parent="ArenaGeometry"]
+transform = Transform( 30, 0, 0, 0, 0.25, 0, 0, 0, 30, 0, -0.25, 0 )
+use_collision = true
+mesh = SubResource( 1 )
+material = SubResource( 2 )
+
+[node name="Lighting" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
+environment = ExtResource( 3 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Lighting"]
+transform = Transform( 0.0838109, 0.880638, -0.466319, 0.725084, 0.267108, 0.634749, 0.683542, -0.391319, -0.616149, -2.49685, 12.1284, -1.08475 )
+light_color = Color( 1, 0.396078, 0, 1 )
+shadow_enabled = true
+shadow_bias = 0.05
+directional_shadow_max_distance = 250.0
+
+[node name="dm11aspenv101" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.775, -3.8147e-06, -4.26252 )
+
+[node name="dm11aspenv201" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.006, -3.8147e-06, 3.94904 )
+
+[node name="dm11aspenv202" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5285, 0, -3.0583 )
+
+[node name="dm11aspenv102" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.9761, -5.72205e-06, 9.4553 )
+
+[node name="dm11aspenv203" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.994377, 0, -0.1059, 0, 1, 0, 0.1059, 0, 0.994377, -21.6846, -3.8147e-06, 13.4124 )
+
+[node name="dm11aspenv103" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.994377, 0, -0.1059, 0, 1, 0, 0.1059, 0, 0.994377, -15.2988, -1.90735e-06, 16.3935 )
+
+[node name="dm11aspenv204" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.994377, 0, -0.1059, 0, 1, 0, 0.1059, 0, 0.994377, -11.5209, 3.8147e-06, 22.6481 )
+
+[node name="dm11aspenv104" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.994377, 0, -0.1059, 0, 1, 0, 0.1059, 0, 0.994377, -5.50377, 3.8147e-06, 24.8683 )
+
+[node name="dm11aspenv205" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.994377, 0, -0.1059, 0, 1, 0, 0.1059, 0, 0.994377, 0.546374, 3.8147e-06, 26.747 )
+
+[node name="dm11aspenv105" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.994377, 0, -0.1059, 0, 1, 0, 0.1059, 0, 0.994377, 3.96571, 0, 23.1846 )
+
+[node name="dm11aspenv206" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.994377, 0, -0.1059, 0, 1, 0, 0.1059, 0, 0.994377, 9.10055, 3.8147e-06, 26.4781 )
+
+[node name="dm11aspenv106" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.994377, 0, -0.1059, 0, 1, 0, 0.1059, 0, 0.994377, 12.7547, 3.8147e-06, 22.0349 )
+
+[node name="dm11aspenv207" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.994377, 0, -0.1059, 0, 1, 0, 0.1059, 0, 0.994377, 18.8238, 0, 22.1852 )
+
+[node name="dm11aspenv107" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7234, -3.8147e-06, 14.4288 )
+
+[node name="dm11aspenv208" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7048, -3.8147e-06, 12.4106 )
+
+[node name="dm11aspenv108" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.9495, 3.8147e-06, 7.03644 )
+
+[node name="dm11aspenv209" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.982538, 0, 0.186061, 0, 1, 0, -0.186061, 0, 0.982538, 26.9037, 0, 0.199393 )
+
+[node name="dm11aspenv109" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.982538, 0, 0.186061, 0, 1, 0, -0.186061, 0, 0.982538, 22.8935, 0, -5.49149 )
+
+[node name="dm11aspenv210" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.982538, 0, 0.186061, 0, 1, 0, -0.186061, 0, 0.982538, 20.7334, 0, -16.3769 )
+
+[node name="dm11aspenv110" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.982538, 0, 0.186061, 0, 1, 0, -0.186061, 0, 0.982538, 23.6808, 0, -10.4969 )
+
+[node name="dm11aspenv111" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.929866, 0, -0.367897, 0, 1, 0, 0.367897, 0, 0.929866, 13.6792, 0, -15.1137 )
+
+[node name="dm11aspenv211" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.929866, 0, -0.367897, 0, 1, 0, 0.367897, 0, 0.929866, 14.1468, 3.8147e-06, -20.9245 )
+
+[node name="dm11aspenv112" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.929866, 0, -0.367897, 0, 1, 0, 0.367897, 0, 0.929866, 8.77195, -1.90735e-06, -23.4708 )
+
+[node name="dm11aspenv212" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.929866, 0, -0.367897, 0, 1, 0, 0.367897, 0, 0.929866, 8.01727, -3.8147e-06, -28.1671 )
+
+[node name="dm11aspenv213" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.929866, 0, -0.367897, 0, 1, 0, 0.367897, 0, 0.929866, 0.314141, 0, -26.3655 )
+
+[node name="dm11aspenv113" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.75309, 0, -25.5629 )
+
+[node name="dm11aspenv214" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.796456, 0, 0.604696, 0, 1, 0, -0.604696, 0, 0.796456, -13.9732, 0, -22.6703 )
+
+[node name="dm11aspenv114" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.796456, 0, 0.604696, 0, 1, 0, -0.604696, 0, 0.796456, -19.8435, 0, -19.2499 )
+
+[node name="dm11aspenv215" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.796456, 0, 0.604696, 0, 1, 0, -0.604696, 0, 0.796456, -14.9598, 0, -14.6289 )
+
+[node name="dm11aspenv115" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.796456, 0, 0.604696, 0, 1, 0, -0.604696, 0, 0.796456, -20.0637, 3.8147e-06, -11.1098 )
+
+[node name="dm11aspenv216" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.796456, 0, 0.604696, 0, 1, 0, -0.604696, 0, 0.796456, -16.0336, 0, -7.79696 )
+
+[node name="dm11rocksmv201" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.6681, 3.8147e-06, 1.42858 )
+
+[node name="dm11rocksmv202" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.03586, 0, -21.4929 )
+
+[node name="dm11rocksmv203" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2397, 0, -20.356 )
+
+[node name="dm11rocksmv204" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9549, -3.8147e-06, -9.24929 )
+
+[node name="dm11rocksmv101" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.94844, 0, 22.1479 )
+
+[node name="dm11rocksmv205" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3492, 0, 10.9469 )
+
+[node name="dm11rocksmv206" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2865, -3.8147e-06, 16.0235 )
+
+[node name="dm11rocksmv102" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0596, 3.8147e-06, 1.68003 )
+
+[node name="dm11aspenv217" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34077, -3.8147e-06, -13.0996 )
+
+[node name="dm11aspenv116" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0496, 1.90735e-06, 3.81925 )
+
+[node name="dm11aspenv218" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.31789, 0, 12.4631 )
+
+[node name="dm11aspenv117" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4007, 0, -3.69146 )
+
+[node name="dm11aspenv219" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.22825, 0, 9.57531 )
+
+[node name="dm17x201" parent="." instance=ExtResource( 7 )]
+transform = Transform( -0.999536, 0, 0.0304687, 0, 1, 0, -0.0304687, 0, -0.999536, -0.929446, 1.90735e-06, 4.09708 )

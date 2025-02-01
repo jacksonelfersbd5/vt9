@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://presets/dm16x2doors01.tres" type="Material" id=1]
+[ext_resource path="res://presets/dm16x2windows01.tres" type="Material" id=2]
+[ext_resource path="res://presets/dm16x2dome01.tres" type="Material" id=3]
+[ext_resource path="res://objects/dm16.x6.01.glb" type="PackedScene" id=4]
+
+[node name="dm16x601" instance=ExtResource( 4 )]
+
+[node name="dm16x6domes01" parent="." index="0"]
+material/0 = ExtResource( 3 )
+
+[node name="dm16x6doors01" parent="." index="1"]
+material/0 = ExtResource( 1 )
+
+[node name="dm16x6windows01" parent="." index="2"]
+material/0 = ExtResource( 2 )

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_transparent = true
+albedo_color = Color( 0.227451, 0.780392, 0.94902, 0.501961 )
+
+[node name="dm162401"]
+
+[node name="dm1624windows01" parent="." index="1"]
+material/0 = SubResource( 1 )
