@@ -6,7 +6,7 @@
 [ext_resource path="res://Levels/Main/L_Main.gd" type="Script" id=4]
 [ext_resource path="res://textures/terrain.grass.png" type="Texture" id=5]
 [ext_resource path="res://objects/grassland/parts/dm11.aspen.v1.01.glb" type="PackedScene" id=6]
-[ext_resource path="res://scenes/dm17x201.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/dm17x202.tscn" type="PackedScene" id=7]
 [ext_resource path="res://objects/grassland/parts/dm11.rock.sm.v1.01.glb" type="PackedScene" id=8]
 [ext_resource path="res://objects/grassland/parts/dm11.rock.sm.v2.01.glb" type="PackedScene" id=12]
 
@@ -37,7 +37,7 @@ material = SubResource( 2 )
 environment = ExtResource( 3 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="Lighting"]
-transform = Transform( 0.0838109, 0.880638, -0.466319, 0.725084, 0.267108, 0.634749, 0.683542, -0.391319, -0.616149, -2.49685, 12.1284, -1.08475 )
+transform = Transform( 0.228323, -0.962825, 0.144348, 0.725084, 0.267108, 0.634749, -0.649709, -0.0402638, 0.759116, -2.49685, 12.1284, -1.08475 )
 light_color = Color( 1, 0.396078, 0, 1 )
 shadow_enabled = true
 shadow_bias = 0.05
@@ -175,5 +175,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4007, 0, -3.69146 )
 [node name="dm11aspenv219" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.22825, 0, 9.57531 )
 
-[node name="dm17x201" parent="." instance=ExtResource( 7 )]
-transform = Transform( -0.999536, 0, 0.0304687, 0, 1, 0, -0.0304687, 0, -0.999536, -0.929446, 1.90735e-06, 4.09708 )
+[node name="dm17x202" parent="." instance=ExtResource( 7 )]
+transform = Transform( -0.986389, 0, 0.164428, 0, 1, 0, -0.164428, 0, -0.986389, -0.84316, -3.8147e-06, 4.34422 )
