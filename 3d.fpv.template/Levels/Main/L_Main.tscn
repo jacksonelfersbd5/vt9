@@ -6,7 +6,7 @@
 [ext_resource path="res://Levels/Main/L_Main.gd" type="Script" id=4]
 [ext_resource path="res://textures/terrain.grass.png" type="Texture" id=5]
 [ext_resource path="res://objects/grassland/parts/dm11.aspen.v1.01.glb" type="PackedScene" id=6]
-[ext_resource path="res://scenes/dm17x201.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/dm17x202.tscn" type="PackedScene" id=7]
 [ext_resource path="res://objects/grassland/parts/dm11.rock.sm.v1.01.glb" type="PackedScene" id=8]
 [ext_resource path="res://objects/grassland/parts/dm11.rock.sm.v2.01.glb" type="PackedScene" id=12]
 
@@ -175,5 +175,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4007, 0, -3.69146 )
 [node name="dm11aspenv219" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.22825, 0, 9.57531 )
 
-[node name="dm17x201" parent="." instance=ExtResource( 7 )]
-transform = Transform( -0.996962, 0, -0.0778848, 0, 1, 0, 0.0778848, 0, -0.996962, -0.644754, 0, 4.65472 )
+[node name="dm17x202" parent="." instance=ExtResource( 7 )]
+transform = Transform( -0.998961, 0, 0.0455721, 0, 1, 0, -0.0455721, 0, -0.998961, -0.0164402, -3.8147e-06, 2.12569 )
