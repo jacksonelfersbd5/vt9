@@ -1,0 +1,31 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://common/assets/materials/walls.tres" type="Material" id=1]
+[ext_resource path="res://common/assets/materials/windows.tres" type="Material" id=2]
+[ext_resource path="res://objects/dm17.x2.04.glb" type="PackedScene" id=3]
+[ext_resource path="res://texture.02/dm17_blue_suede_01.png" type="Texture" id=4]
+[ext_resource path="res://common/assets/materials/doors.tres" type="Material" id=5]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 4 )
+uv1_scale = Vector3( 5, 5, 1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.423529, 0.392157, 0.392157, 1 )
+
+[node name="dm17x204" instance=ExtResource( 3 )]
+
+[node name="dm17x2doors02" parent="." index="0"]
+material/0 = ExtResource( 5 )
+
+[node name="dm17x2rugs02" parent="." index="1"]
+material/0 = SubResource( 1 )
+
+[node name="dm17x2windows02" parent="." index="2"]
+material/0 = ExtResource( 2 )
+
+[node name="dm17x2interior03" parent="." index="3"]
+material/0 = SubResource( 2 )
+
+[node name="dm17x2domes03" parent="." index="4"]
+material/0 = ExtResource( 1 )
